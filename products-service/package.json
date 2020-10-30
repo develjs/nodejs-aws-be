@@ -1,0 +1,25 @@
+{
+  "name": "products-service",
+  "version": "1.0.0",
+  "description": "SLS Products servise",
+  "scripts": {
+    "test": "npx jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "jest": "^26.6.1",
+    "serverless-jest-plugin": "^0.3.0",
+    "serverless-webpack": "^5.3.1",
+    "webpack": "^4.35.2"
+  },
+  "author": "develjs@github.com",
+  "license": "MIT",
+  "dependencies": {
+    "babel-jest": "^26.6.1"
+  }
+}
