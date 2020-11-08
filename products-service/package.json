@@ -12,14 +12,15 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.6.0",
+    "babel-jest": "^26.6.1",
     "jest": "^26.6.1",
+    "pg": "^8.4.2",
+    "serverless-dotenv-plugin": "^3.1.0",
     "serverless-jest-plugin": "^0.3.0",
     "serverless-webpack": "^5.3.1",
     "webpack": "^4.35.2"
   },
   "author": "develjs@github.com",
   "license": "MIT",
-  "dependencies": {
-    "babel-jest": "^26.6.1"
-  }
+  "dependencies": {}
 }

@@ -15,6 +15,7 @@ frameworkVersion: '2'
 plugins:
   - serverless-webpack
   - serverless-jest-plugin
+  - serverless-dotenv-plugin
 
 provider:
   name: aws
@@ -59,6 +60,13 @@ functions:
               method: get
               path: api/v1/products
               cors: true
+    post-products:
+        handler: post-products.main
+        events:
+          - http:
+              method: post
+              path: api/v1/products
+              cors: true
     get-product:
         handler: get-product.main
         events:
@@ -66,6 +74,7 @@ functions:
               method: get
               path: api/v1/products/{id}
               cors: true
+        
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
@@ -120,10 +129,12 @@ functions:
 #       Value: "Some output value"
 custom:
   webpack:
-#    config: ./path/to/config/file.js
-#    series: true # run Webpack in series, useful for large projects. Defaults to false.
+    # config: ./path/to/config/file.js
+    # series: true # run Webpack in series, useful for large projects. Defaults to false.
   jest:
     # You can pass jest options here
     # See details here: https://facebook.github.io/jest/docs/configuration.html
     # For instance, uncomment next line to enable code coverage
     # collectCoverage: true
+  dotenv:
+    path: ../.env

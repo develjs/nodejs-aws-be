@@ -1,5 +1,6 @@
 /.tern-*
 /*.workspace
 package-lock.json
+.env
 node_modules
 .codelite
