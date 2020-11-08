@@ -1,5 +1,6 @@
 const path = require('path');
 // eslint-disable-next-line import/no-unresolved
+const webpack = require('webpack');
 const slsw = require('serverless-webpack');
 
 module.exports = {
@@ -11,6 +12,9 @@ module.exports = {
   },
   mode: 'development',
   target: 'node',
+  plugins: [
+    new webpack.IgnorePlugin(/^pg-native$/)
+  ],
   module: {
     rules: [
       {
